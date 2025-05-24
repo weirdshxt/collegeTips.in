@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@layer components {
+  .line1 {
+    @apply w-15 h-[0.15rem] rounded bg-black transition-all duration-300 ease-in-out;
+  }
+  .line2 {
+    @apply w-10 h-[0.15rem] mt-2 rounded bg-black transition-all duration-300 ease-in-out;
+  }
+}
+
+.hamburger-icon {
+width: 5rem;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+cursor: pointer;
+}
+
+.hamburger-icon.open .line1:first-child {
+transform: translateY(5px) rotate(45deg);
+width: 2.5rem;
+transition: all 0.3s linear;
+}
+
+.hamburger-icon.open .line2:last-child {
+transform: translateY(-5px) rotate(-45deg);
+width: 2.5rem;
+transition: all 0.3s linear;
+}
