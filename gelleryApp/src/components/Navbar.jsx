@@ -10,8 +10,8 @@ const Navbar = () => {
     };
 
   return (
-    <div className="flex items-center justify-between p-4 fixed top-0 left-0 right-0">
-      <div className="p-4 px-8">
+    <div id='navbar' className="flex items-center justify-between p-4 fixed top-0 left-0 right-0 z-50">
+      <div className="p-4">
         <HamburgerIcon isOpen={open} onClick={toggle} />
       </div>
       <div className="flex items-center">

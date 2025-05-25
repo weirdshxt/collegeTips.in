@@ -7,6 +7,10 @@
   .line2 {
     @apply w-10 h-[0.15rem] mt-2 rounded bg-black transition-all duration-300 ease-in-out;
   }
+
+  .card{
+    @apply w-[23rem] h-[29rem] sm:w-[24rem] sm:h-[32rem]
+  }
 }
 
 .hamburger-icon {
@@ -27,4 +31,12 @@ transition: all 0.3s linear;
 transform: translateY(-5px) rotate(-45deg);
 width: 2.5rem;
 transition: all 0.3s linear;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.2); /* Adjust the alpha value for transparency */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
 }
