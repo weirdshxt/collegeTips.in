@@ -293,20 +293,20 @@ const Home = () => {
         inertia: true,
         cursor: "grab",
         activeCursor: "grabbing",
-        onPress: function() {
+        onPress: function () {
           // Increase z-index of sidebar to be on top when dragging starts
-          const sidebar = document.querySelector('.cards');
+          const sidebar = document.querySelector(".cards");
           if (sidebar) {
-            sidebar.style.zIndex = '0';
+            sidebar.style.zIndex = "0";
           }
         },
-        onRelease: function() {
+        onRelease: function () {
           // Reset z-index of sidebar when dragging ends
-          const sidebar = document.querySelector('.glass-container');
+          const sidebar = document.querySelector(".glass-container");
           if (sidebar) {
-            sidebar.style.zIndex = '5';
+            sidebar.style.zIndex = "5";
           }
-        }
+        },
       });
     }
 
@@ -328,7 +328,6 @@ const Home = () => {
           paused: false,
         }
       );
-
     }
 
     -window.scrollTo(0, 0);
