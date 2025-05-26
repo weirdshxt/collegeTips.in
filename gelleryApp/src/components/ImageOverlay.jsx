@@ -71,7 +71,7 @@ const ImageOverlay = () => {
         </div>
       </div>
 
-      <div className="cards grid grid-cols-1 md:grid-cols-2 sm:flex sm:flex-nowrap gap-7">
+      <div className="cards px-8 pb-4 grid grid-cols-1 md:grid-cols-2 sm:flex sm:flex-nowrap gap-7">
         <div className="card p-8 sm:flex-shrink-0">
           <img
             className="object-cover w-full h-full"

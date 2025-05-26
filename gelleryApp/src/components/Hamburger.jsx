@@ -3,7 +3,7 @@ import React from "react";
 const HamburgerIcon = ({ isOpen, onClick }) => {
   return (
     <div
-      className={`hamburger-icon relative z-50 ${isOpen ? "open" : ""}`}
+      className={`hamburger-icon relative z-55 ${isOpen ? "open" : ""}`}
       onClick={onClick}
     >
       <div className="line1"></div>

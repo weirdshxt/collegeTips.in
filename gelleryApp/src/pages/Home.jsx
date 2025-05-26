@@ -304,24 +304,17 @@ const Home = () => {
       const animation = gsap.fromTo(
         cards,
         {
-          x: "50%",
+          x: "80%",
         },
         {
-          x: `-100%`,
-          duration: 10,
+          x: `-190%`,
+          duration: 15,
           ease: "linear",
           repeat: false,
           paused: false,
-          resume: true,
         }
       );
 
-      // Pause animation on hover of any card, resume on mouse leave
-      // const cardElements = cards.querySelectorAll(".card");
-      // cardElements.forEach(card => {
-      // cards.addEventListener("mouseenter", () => animation.pause());
-      // cards.addEventListener("mouseleave", () => animation.resume());
-      // });
     }
 
     -window.scrollTo(0, 0);
@@ -332,11 +325,11 @@ const Home = () => {
       <Navbar />
       <h1
         id="title-text"
-        className="text-6xl sm:text-9xl split absolute z-51 font-bold text-white"
+        className="text-5xl sm:text-9xl split absolute z-51 font-bold text-white"
       >
         collegeTips.in
       </h1>
-      <h1 className="text-6xl sm:text-9xl saviText absolute top-[17%] font-bold">
+      <h1 className="text-5xl sm:text-9xl saviText absolute top-[17%] font-bold">
         collegeTips.in
       </h1>
 
