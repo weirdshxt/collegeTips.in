@@ -4,14 +4,19 @@ import Loader from "../components/Loader";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Draggable } from "gsap/Draggable";
-import ImageOverlay from "../components/ImageOverlay";
 import { chillImages } from "../assets/imageArrays";
+import { CircleArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
-gsap.registerPlugin(useGSAP, SplitText, ScrollTrigger, Draggable);
+gsap.registerPlugin(useGSAP, SplitText);
 
 const TeamVibes = () => {
+  const navigate = useNavigate();
+
+  const nextCate = () => {
+    navigate("/category/workplay")
+  }
+
   useEffect(() => {
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
@@ -30,11 +35,10 @@ const TeamVibes = () => {
     };
   }, []);
 
+  const isSmallScreen = window.matchMedia("(max-width: 639px)").matches;
   useGSAP(() => {
     const loader = document.querySelector("#loader");
     const title = document.querySelector("#title-text");
-
-    const isSmallScreen = window.matchMedia("(max-width: 639px)").matches;
 
     let split = SplitText.create(".split", { type: "words, chars" });
     let splitSavi = SplitText.create(".saviText", { type: "words, chars" });
@@ -66,7 +70,7 @@ const TeamVibes = () => {
         document.querySelector(".saviText").style.display = "block"; // Ensure title is visible after animation
         title.style.display = "none";
         gsap.to(splitSavi.chars, {
-          left: isSmallScreen ? "-45%" : "-70%",
+          left: isSmallScreen ? "-45%" : "-95%",
           duration: 1,
           autoAlpha: 1,
           stagger: { each: 0.03, from: "end" },
@@ -109,6 +113,15 @@ const TeamVibes = () => {
         stagger: 0.5,
       }
     );
+
+    gsap.from(".next ", {
+      x: -50,
+      opacity: 0,
+      duration: 1,
+      delay: 1.5,
+      ease: "power2.inOut",
+      stagger: 0.5,
+    });
   });
 
   return (
@@ -123,6 +136,17 @@ const TeamVibes = () => {
       <h1 className="text-5xl sm:text-9xl saviText absolute top-[17%] font-bold">
         Team Vibes
       </h1>
+
+      <div
+        className={`next absolute ${
+          isSmallScreen ? "top-[18%] right-[10%]" : "top-[20%] right-[12%]"
+        }  z-10 cursor-pointer`}
+        onClick={() => {
+          nextCate()
+        }}
+      >
+        <CircleArrowRight size={isSmallScreen ? 40 : 100} />
+      </div>
 
       <Loader />
 

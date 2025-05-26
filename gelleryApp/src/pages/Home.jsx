@@ -293,6 +293,20 @@ const Home = () => {
         inertia: true,
         cursor: "grab",
         activeCursor: "grabbing",
+        onPress: function() {
+          // Increase z-index of sidebar to be on top when dragging starts
+          const sidebar = document.querySelector('.cards');
+          if (sidebar) {
+            sidebar.style.zIndex = '0';
+          }
+        },
+        onRelease: function() {
+          // Reset z-index of sidebar when dragging ends
+          const sidebar = document.querySelector('.glass-container');
+          if (sidebar) {
+            sidebar.style.zIndex = '5';
+          }
+        }
       });
     }
 
@@ -308,7 +322,7 @@ const Home = () => {
         },
         {
           x: `-190%`,
-          duration: 15,
+          duration: 20,
           ease: "linear",
           repeat: false,
           paused: false,
