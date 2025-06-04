@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="flex">About</div>
         <div className="flex">Volunteer</div>
         <div className="flex">Impact</div>
-        <div className="flex bg-[#E16900] rounded-full py-2 px-4 cursor-pointer">
+        <div className="flex rounded-full py-2 px-4 cursor-pointer bg-amber-500 hover:bg-amber-600 text-white font-medium transition">
           Adopt
         </div>
       </div>
