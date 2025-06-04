@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Buddy",
+        "breed": "Golden Retriever",
+        "age": 3,
+        "image": "assets/images/buddy.jpg",
+        "description": "Buddy is a friendly and energetic Golden Retriever who loves to play fetch and go for long walks."
+    },
+    {
+        "id": 2,
+        "name": "Mittens",
+        "breed": "Tabby Cat",
+        "age": 2,
+        "image": "assets/images/mittens.jpg",
+        "description": "Mittens is a playful Tabby cat who enjoys cuddling and chasing after laser pointers."
+    },
+    {
+        "id": 3,
+        "name": "Charlie",
+        "breed": "Beagle",
+        "age": 4,
+        "image": "assets/images/charlie.jpg",
+        "description": "Charlie is a curious Beagle who loves to explore and sniff around the neighborhood."
+    },
+    {
+        "id": 4,
+        "name": "Luna",
+        "breed": "Siberian Husky",
+        "age": 1,
+        "image": "assets/images/luna.jpg",
+        "description": "Luna is a spirited Siberian Husky with a love for adventure and a playful personality."
+    },
+    {
+        "id": 5,
+        "name": "Whiskers",
+        "breed": "Persian Cat",
+        "age": 5,
+        "image": "assets/images/whiskers.jpg",
+        "description": "Whiskers is a gentle Persian cat who enjoys lounging in the sun and being pampered."
+    }
+]

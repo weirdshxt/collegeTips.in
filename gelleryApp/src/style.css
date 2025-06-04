@@ -41,9 +41,9 @@ transition: all 0.3s linear;
 }
 
 .card , .glass-container {
-  background: rgba(255, 255, 255, 0.2); /* Adjust the alpha value for transparency */
+  background: rgba(255, 255, 255, 0.247); /* Adjust the alpha value for transparency */
   border-radius: 10px; /* Optional: Add rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
-  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  backdrop-filter: blur(25px); /* Adjust the blur radius as needed */
+  -webkit-backdrop-filter: blur(25px); /* For Safari support */
 }
