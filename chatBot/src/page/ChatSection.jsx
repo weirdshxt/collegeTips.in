@@ -34,7 +34,7 @@ const ChatSection = () => {
       }
       return line;
     });
-    formattedReply = processedLines.join('<br>');
+    formattedReply = processedLines.join("<br><br>");
     
     if (hasListItems) {
       formattedReply = `<ul>${formattedReply}</ul>`; // Wrap in <ul> if list items exist
