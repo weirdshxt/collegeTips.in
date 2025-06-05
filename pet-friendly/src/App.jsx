@@ -3,6 +3,8 @@ import Home from './page/Home'
 import About from './page/About'
 import Impact from './page/Impact'
 import Volunteer from './page/Volunteer'
+import Adopt from './page/Adopt'
+import Footer from './page/Footer'
 
 const App = () => {
   return (
@@ -11,6 +13,8 @@ const App = () => {
       <About />
       <Impact />
       <Volunteer />
+      <Adopt />
+      <Footer />
     </>
   )
 }
