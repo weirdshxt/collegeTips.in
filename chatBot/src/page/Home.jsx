@@ -14,7 +14,7 @@ const Home = () => {
         <p className="text-xl mb-8 text-center">How can I help you?</p>
         <button
           onClick={() => navigate("/chat")}
-          className="bg-white text-[#5e2eff] px-6 py-2 rounded-full text-sm font-medium shadow"
+          className="bg-white text-[#5e2eff] px-6 py-2 rounded-full text-sm font-medium shadow cursor-pointer hover:scale-110 transition-all duration-300"
         >
           I want to know!
         </button>

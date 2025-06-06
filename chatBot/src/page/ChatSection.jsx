@@ -65,7 +65,7 @@ const ChatSection = () => {
           <span onClick={() => navigate("/")} className="cursor-pointer">
             <ArrowLeftIcon />
           </span>
-          <p className="ml-3">Hello, I’m Izyan</p>
+          <p className="ml-3">Hello, I’m Izyan 🤖</p>
         </div>
 
         <div className="flex-1 overflow-y-auto p-4 bg-[#f8f8ff] space-y-3">
@@ -87,7 +87,7 @@ const ChatSection = () => {
               onChange={(e) => setInput(e.target.value)}
               placeholder="Message"
             />
-            <button type="submit" className="text-white text-xl">
+            <button type="submit" className="text-white text-xl cursor-pointer">
               ➤
             </button>
           </div>

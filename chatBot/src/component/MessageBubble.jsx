@@ -3,14 +3,18 @@ const MessageBubble = ({ text, sender }) => {
   const user = "bg-violet-700 ml-auto text-[#e2e1ff]";
   const bot = "bg-[#e8e6ff] text-left mr-auto text-violet-700";
 
-  // If the sender is 'bot', the text might be HTML, so use dangerouslySetInnerHTML.
-  // Otherwise, render text directly to prevent XSS from user input.
+
   return (
-    <div className={`${base} ${sender === "user" ? user : bot}`}>
+    <div className={`flex items-start ${sender === "user" ? "justify-end" : "justify-start"}`}>
+      {sender === "bot" && <span className="text-xl mr-1">🤖</span>}
       {sender === "bot" ? (
-        <div dangerouslySetInnerHTML={{ __html: text }} />
+        <div className={`${base} ${bot}`}>
+          <div dangerouslySetInnerHTML={{ __html: text }} />
+        </div>
       ) : (
-        text
+        <div className={`${base} ${user}`}>
+          {text}
+        </div>
       )}
     </div>
   );
